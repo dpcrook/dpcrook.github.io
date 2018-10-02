@@ -9,7 +9,20 @@ image: /images/IR_tx_stretch_card.jpg
 
 In my HomeKit™ household, one missing piece was turning on/off AV receiver, as the receiver only had an infrared remote control (no network connection). Since there was already a Raspberry Pi connected nearby (used for AirPlay® playback), a solution presented itself. Using some additional hardware I had available, there is even a way to control the receiver with Siri® shortcuts.
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
 
+  - [Get IR codes from Sony Receiver Remote](#get-ir-codes-from-sony-receiver-remote)
+      - [Using Arduino and TSOP 38238 IR Receiver Diode](#using-arduino-and-tsop-38238-ir-receiver-diode)
+  - [Wire Up an IR Transmitter on Raspberry Pi](#wire-up-an-ir-transmitter-on-raspberry-pi)
+      - [IR Transmitter circuit](#ir-transmitter-circuit)
+      - [Raspberry Pi Kernel overlay for LIRCD](#raspberry-pi-kernel-overlay-for-lircd)
+  - [Configure LIRCd With Transmitter Codes](#configure-lircd-with-transmitter-codes)
+  - [Invoke Receiver Controls with Siri Shortcuts](#invoke-receiver-controls-with-siri-shortcuts)
+      - [Siri Shortcuts can do that?](#siri-shortcuts-can-do-that)
+  - [Footnotes](#footnotes)
+
+<!-- markdown-toc end -->
 
 
 # Overview
@@ -184,5 +197,7 @@ I associated the Siri® Phrase "Turn On Receiver" for the Shortcut (along with a
 Something to note is that, at least on iOS™ 12.0, you need to add a Siri Phrase on each device. So if you have an iPad you want to use, you need to re-record the Siri Phrase. Another thing to note: on macOS™ Mojave, there are no Siri® Shortcuts implemented (yet?!).
 
 The Siri shortcut even worked for me when invoked via an Apple Watch® from watchOS® 5.
+
+# Footnotes
 
 [^1]: ![<](/images/sony_rm-aau190.jpg)
